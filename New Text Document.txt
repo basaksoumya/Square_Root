@@ -1,6 +1,5 @@
 //******Soumyadip Basak*******//
-//
-Implementation of SquareRoot function in C/C++
+//Implementation of SquareRoot function in C/C++
 
 #include<stdio.h>
 
