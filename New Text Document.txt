@@ -1,0 +1,71 @@
+//******Soumyadip Basak*******//
+//
+Implementation of SquareRoot function in C/C++
+
+#include<stdio.h>
+
+#include<math.h>
+
+#include<stdlib.h>
+
+double square_root1(double);
+
+int main()
+
+{
+    
+printf("Enter a number\n");
+
+    double input;
+
+    scanf("%lf",&input);
+
+    double output=square_root1(input);
+
+    printf("Square root of the %lf is =%lf",input,output);
+
+}
+
+double square_root1(double root)
+
+{
+    
+   double l=root;
+
+      if(root==1||root==0)
+
+        return root;
+
+   double initial=0,pre_root=0,update_root=1;
+
+    for(int i=0;fabs(pre_root-update_root)>0.0001;i++)
+      {
+         
+           pre_root=root;
+
+           root=(initial+root)/2;
+
+           update_root=root;
+
+     if((root*root-l)>0)
+
+             continue;
+
+        if((root*root-l)<0)
+             {
+
+               initial=root;
+
+               root=pre_root;
+
+             }
+        
+        if(root*root-l==0)
+
+           return root;
+
+      }
+
+           return root;
+
+}
